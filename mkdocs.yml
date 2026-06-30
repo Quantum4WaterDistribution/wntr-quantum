@@ -1,0 +1,12 @@
+site_name: WNTR-Quantum
+nav:
+  - Home: index.md
+  - Installation: install.md
+  - Notebook page: notebooks/newton_raphson_Net2Loops/qnr_vqls.ipynb
+  - Notebook page: notebooks/qubo_polynomial_solver/Net0_OptmizedSchedule.ipynb
+  - Notebook page: notebooks/pipe_diameter_optimization/design_pipe_diameter.ipynb
+plugins:
+  - mkdocs-jupyter:
+      execute: false
+      include_requirejs: true
+      custom_mathjax_url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"
