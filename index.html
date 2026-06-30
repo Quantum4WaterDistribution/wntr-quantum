@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>WNTR-Quantum</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">WNTR-Quantum</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="install/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="notebooks/newton_raphson_Net2Loops/qnr_vqls/" class="nav-link">QNR Simulation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="notebooks/qubo_polynomial_solver/Net0_OptmizedSchedule/" class="nav-link">QUBO Simulation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="notebooks/pipe_diameter_optimization/design_pipe_diameter/" class="nav-link">QUBO Network design</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="install/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!-- # WNTR -->
+
+<p><img alt="wntr_quantum" src="wntr_quantum_logo.png" /></p>
+<!-- `wntr_quantum` builds on the python package [WNTR](https://github.com/USEPA/WNTR) to leverage quantum computing for the simulation and optimization of water networks. The main capablities of the software are: -->
+
+<!-- ## Installation
+
+To install wntr-quantum, run the following command from the command line:
+
+```bash
+pip install wntr-quantum
+``` -->
+
+<!-- <div class="text-center">
+<a href="getting-started/" class="btn btn-primary" role="button">Getting Started</a>
+<a href="user-guide/" class="btn btn-primary" role="button">User Guide</a>
+</div> -->
+
+<!-- ## Features -->
+
+<div class="pt-2 pb-4 px-4 my-4 bg-body-tertiary rounded-3">
+<h2 class="display-4 text-center">Features</h2>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h3 class="card-title">Quantum Enhanced Newton-Raphson Algorithm</h3>
+        <p class="card-text">
+            The  <a href="https://github.com/Quantum4WaterDistribution/wntr-quantum/blob/da5aaa40f0ee20b0d73716200a2f4f3d7a809825/wntr_quantum/sim/epanet.py#L75">QuantumEpanetSimulator</a> of `wntr_quantum` use quantum solvers to solve the linear systems required as part of the Newon-Raphson GGA algorithm.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h3 class="card-title">Quantum Hydraulics Simulations</h3>
+        <p class="card-text">
+            The <a href="https://github.com/Quantum4WaterDistribution/wntr-quantum/blob/da5aaa40f0ee20b0d73716200a2f4f3d7a809825/wntr_quantum/sim/core_qubo.py#L14">FullQuboPolynomialSimulator</a> recast the hydraulics equation as a Quadratic Unconstrained Binary Optimization (QUBO) problem, that can be solved using quantum annealers.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Quantum Optimization of Water Networks</h3>
+        <p class="card-text">
+            The <a href="https://github.com/Quantum4WaterDistribution/wntr-quantum/blob/da5aaa40f0ee20b0d73716200a2f4f3d7a809825/wntr_quantum/design/qubo_pipe_diam.py#L32">QUBODesignPipeDiameter</a> recast the hydraulics equation and the pipe-diameter optimization as a Quadratic Unconstrained Binary Optimization problem, that can be solved using quantum annealers.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Quantum Linear Solvers</h3>
+        <p class="card-text">
+            Multiple Gate Base and Annealer Quantum Linear solvers available to integrate in optimization and design problems.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-06-30 15:04:06.895321+00:00
+-->
